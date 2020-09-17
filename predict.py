@@ -5,6 +5,7 @@ import config
 import os
 
 def make_prediction(input_data):
+    #load latest model
     model_list = os.listdir("models")
     model_list = sorted(model_list, key = timestamp)
     model_name = "models/"+model_list[-1]
