@@ -19,5 +19,6 @@ jobs:
         run: |
 
           # Your ML workflow goes here
+          ls
           python train_pipline.py
           python predict.py
