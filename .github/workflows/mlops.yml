@@ -14,8 +14,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirement.txt
-          ls
-          python train_pipline.py
-          python predict.py
-          
 
+      - name: Train Model
+        run: |
+          python train_pipeline.py
+
+      - name: Validate Model
+        run: |
+          python predict.py 
