@@ -2,7 +2,7 @@ name: train-validate-monitor
 on: [push]
 jobs:
   run:
-    runs-on: [macos-latest]
+    runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python
@@ -13,12 +13,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pipenv
-          pipenv install  
-      
-      - name: run-training
-        run: |
+          pip install -r requirement.txt
 
-          # Your ML workflow goes here
-          pipenv shell
-          python train_pipline.py
+      - name: Train Model
+        run: |
+          python train_pipeline.py
+
+      - name: Validate Model
+        run: |
+          python predict.py 
