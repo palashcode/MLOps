@@ -1,7 +1,7 @@
 name: monitor 
 on:
     schedule:
-        - cron: '*/15 * * * *'
+        - cron: '*/30 * * * *'
     run:
         runs-on: [ubuntu-latest]
         steps:
