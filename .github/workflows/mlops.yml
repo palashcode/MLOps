@@ -13,7 +13,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirement.txt
+          pip install pipenv
+          pipenv install
 
       - name: Train Model
         run: |
