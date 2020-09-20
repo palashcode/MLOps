@@ -21,7 +21,7 @@ def run_training():
         test_size=0.2,
         random_state=0)  # we are setting the seed here
 
-    rf = RandomForestClassifier(n_jobs=3)
+    rf = RandomForestClassifier(n_estimators=10, n_jobs=2)
     rf.fit(X_train, y_train)
     predictions = rf.predict(X_test)
 
@@ -35,7 +35,7 @@ def run_training():
     # matrics calculation
     accuracy = accuracy_score(y_test, predictions)
     f1 = f1_score(y_test, predictions)
-    all_matrics = {"version":version, "accuracy":round(accuracy,4), "f1":round(f1,4)}#, "precision":precision, "recall":recall}
+    all_matrics = {"version":version+1, "accuracy":round(accuracy,4), "f1":round(f1,4)}#, "precision":precision, "recall":recall}
     with open(f"models/matrics/matrics_v{version+1}.json", "w") as fp:
         json.dump(all_matrics, fp)
 
