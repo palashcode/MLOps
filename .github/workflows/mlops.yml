@@ -1,8 +1,8 @@
-name: train-validate-monitor
+name: train-validate
 on: [push]
 jobs:
   run:
-    runs-on: [macos-latest]
+    runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python
@@ -21,4 +21,4 @@ jobs:
 
           # Your ML workflow goes here
           pipenv shell
-          python train_pipline.py
+          python train.py

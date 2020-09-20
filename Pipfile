@@ -13,6 +13,8 @@ matplotlib = "*"
 seaborn = "*"
 sklearn = "*"
 joblib = "*"
+flask = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
