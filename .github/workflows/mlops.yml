@@ -34,7 +34,7 @@ jobs:
             git config --local user.email "palash.akumen@gmail.com"
             git config --local user.name "palashcode"
             git add .
-            git commit -m "update model"
+            git commit -m "updating model"
         - name: Push changes
           uses: ad-m/github-push-action@master
           with:
