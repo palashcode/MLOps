@@ -27,4 +27,14 @@ jobs:
 
         - name: Validate Model
           run: |
-            python predict.py 
+            python predict.py
+            
+        - name: Commit files
+          run: |
+            git config --local user.email "palash.akumen@gmail.com"
+            git config --local user.name "palashcode"
+            git commit -m "update model" -a
+        - name: Push changes
+          uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
