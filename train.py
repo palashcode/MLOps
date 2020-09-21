@@ -44,6 +44,7 @@ def run_training():
         with open("models/version", "w") as fp:
             fp.write(str(version+1))
         print(f"New model saved models/model_v{version+1}")
+        print(all_matrics)
     else:
         print("Model not better than previous so not updated.")
 
