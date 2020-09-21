@@ -21,14 +21,14 @@
 
 
 ## Instruction on running the script
-Model is retrained and validated whenever chnges are pushed or merged to master branch. And latest model is deployed to heroku.
-Model is served as an API at ```https://mlops-api.herokuapp.com/```
-Models are saved in ```models``` folder file name contains timestamp.
-Latest model version is in file ```models/version```
-Models matrics are saved in ```models/matrics```
-File paths are defined in ```config.py```
-data files are stored in ```data``` folder.
+- Model is retrained and validated whenever chnges are pushed or merged to master branch. And latest model is deployed to heroku.
+- Model is served as an API at ```https://mlops-api.herokuapp.com/```
+- Models are saved in ```models``` folder file name contains timestamp.
+- Latest model version is in file ```models/version```
+- Models matrics are saved in ```models/matrics```
+- File paths are defined in ```config.py```
+- data files are stored in ```data``` folder.
 
-To run validation/prediction on new dataset update ```VALIDATION_DATA_FILE``` in  ```config.py```.
-Put the data file in data folder. 
-Then run ```python predict.py```.
+- To run validation/prediction on new dataset update ```VALIDATION_DATA_FILE``` in  ```config.py```.
+- Put the data file in data folder. 
+- Then run ```python predict.py```.
